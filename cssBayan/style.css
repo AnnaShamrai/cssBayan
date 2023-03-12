@@ -1,0 +1,97 @@
+body {
+	max-width: 500px;
+	margin: auto;
+}
+
+.accordion .first {
+	display:block;
+	height: 300px;
+}
+
+/* Формируем блок аккордеона */
+.accordion {
+	width: 100%;
+	max-width: 280px;
+	margin: 0 auto;
+	border: 1px solid white;
+	border-radius: 10px;
+	overflow: hidden;
+
+}
+/* список аккордеона */
+.accordion>ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.accordion>ul>li {
+	display:block;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	height:35px;
+	max-width: 300px;
+/* задержка перехода при раскрытии */
+	transition: height 0.5s ease-in-out;
+	-moz-transition: height 0.5s ease-in-out;
+	-webkit-transition: height 0.5s ease-in-out;
+	-o-transition: height 0.5s ease-in-out;
+}
+/* оформляем пункты */
+.accordion>ul>li>h2 {
+	display:block;
+	margin: 0 auto;
+	padding:10px 20px;  
+	color: #6c6c6c;
+	text-decoration: none;
+	font: 14px  Helvetica, Arial, Sans-Serif;
+	text-shadow: 1px 1px #fff;
+	text-transform:uppercase;
+	background: darkgray;
+	border-top: 1px solid #f4f4f4;
+	border-bottom: 1px solid #d3d3d3;
+	position: relative;
+/* анимируем заголовок */
+ -o-transition: padding-left 0.2s ease-out;
+ -webkit-transition: padding-left 0.2s ease-out;
+ -moz-transition: padding-left 0.2s ease-out;
+}
+
+.accordion>ul>li:hover {
+	height: 330px;
+}
+/* пункты аккордеона при наведении */
+.accordion:hover>ul>li:hover>h2 {
+	/* оформляем пункты при наведении */
+	color: red ;
+	background: gray;
+	cursor:pointer;
+	}
+/* параграфы внутри аккордеона */
+.accordion p {
+		margin: 0 0 10px;
+		background-color: #3A505C;
+		cursor:pointer;
+	}
+/* миниатюры изображений */
+.accordion img{ 
+	width: 100%; 
+	height: auto
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+	
+h2:after {
+	content: '\002B';
+	display: block;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+
+h2:hover::after {
+	content: "\2212";
+	color: red;
+}
+
